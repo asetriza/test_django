@@ -1,0 +1,1 @@
+web: gunicorn --pythonpath src test_django.wsgi
