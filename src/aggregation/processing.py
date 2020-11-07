@@ -8,7 +8,7 @@ from src.database.db_connection import db
 from src.aggregation.get_flight import flights_all_get
 
 
-directions = db.static_flight_directions
+directions = db.core_static_flight_directions
 data = db.test_data
 
 
