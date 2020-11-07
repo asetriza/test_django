@@ -7,7 +7,7 @@ from bson.json_util import dumps, loads
 sys.path.append(os.getcwd())
 from src.database.db_connection import db
 
-from get_flight import flight_get, flights_all_get
+from src.aggregation.get_flight import flights_all_get
 
 
 directions = db.static_flight_directions
