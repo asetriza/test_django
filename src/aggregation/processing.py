@@ -2,8 +2,6 @@ import os
 import sys
 from datetime import date, datetime
 
-from bson.json_util import dumps, loads
-
 sys.path.append(os.getcwd())
 from src.database.db_connection import db
 

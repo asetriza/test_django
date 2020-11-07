@@ -1,9 +1,12 @@
+import os
+import sys
 import datetime
 from datetime import date
 
 import dateparser
 
-from connection import booking_get, skypidcker_get
+sys.path.append(os.getcwd())
+from src.aggragation.connection import booking_get, skypidcker_get
 
 
 def flights_all_get(fly_from, fly_to, date_from, date_to):
