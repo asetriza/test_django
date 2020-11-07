@@ -14,7 +14,7 @@ directions = db.static_flight_directions
 data = db.test_data
 
 
-def processing():
+def processing_flghts():
     for i in directions.find({}):
         date_parsed = date.today()
         fly_from = i["fly_from"]
