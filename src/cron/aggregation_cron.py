@@ -9,8 +9,8 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 sched = BlockingScheduler()
 
 
-@sched.scheduled_job("cron", day_of_week="mon-sun", hour=18, minute=10, second=1)
-def timed_job():
+@sched.scheduled_job("cron", day_of_week="mon-sun", hour=18, minute=16, second=1)
+def scheduled_job():
     processing_flghts()
     print("This job processes flghts and sends to db every day at 00:00:01")
 
