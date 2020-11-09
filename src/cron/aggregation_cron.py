@@ -16,7 +16,7 @@ def scheduled_job():
 
 
 @sched.scheduled_job(
-    "cron", month="jan-dec", day_of_week="mon-sun", hour=18, minute=31, second=1
+    "cron", month="jan-dec", day_of_week="mon", hour=18, minute=36, second=1
 )
 def scheduled_job():
     print("This job is run every weekday at 5pm.")
