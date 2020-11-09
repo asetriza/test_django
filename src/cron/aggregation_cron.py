@@ -9,20 +9,10 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 sched = BlockingScheduler()
 
 
-@sched.scheduled_job("cron", month="*", day_of_week="*", hour=12, minute=59, second=1)
+@sched.scheduled_job("cron", month="*", day_of_week="*", hour=18, minute=0, second=1)
 def scheduled_job():
     processing_flghts()
-    print("This job processes flghts and sends to db every day at 00:00:01")
-
-
-@sched.scheduled_job("cron", month="*", day_of_week="*", hour=12, minute=59, second=1)
-def scheduled_job():
-    print("This job is run every weekday at 5pm.")
-
-
-@sched.scheduled_job("interval", minutes=1)
-def timed_job():
-    print("This job is run every 1 minutes.")
+    print("This job processes flghts and sends to db every day at 00:00:01 Asia/Almaty")
 
 
 sched.start()
