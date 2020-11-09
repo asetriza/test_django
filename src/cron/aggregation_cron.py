@@ -22,4 +22,9 @@ def scheduled_job():
     print("This job is run every weekday at 5pm.")
 
 
+@sched.scheduled_job("interval", minutes="*")
+def timed_job():
+    print("This job is run every 1 minutes.")
+
+
 sched.start()
