@@ -15,9 +15,9 @@ def scheduled_job():
     print("This job processes flghts and sends to db every day at 00:00:00 UTC 0")
 
 
-@sched.scheduled_job("interval", minutes=30)
+@sched.scheduled_job("interval", minutes=1)
 def timed_job():
-    print("This job is run every 30 minutes.")
+    print("This job is run every 1 minute.")
 
 
 sched.start()
