@@ -1,8 +1,6 @@
 import os
 from os import name
 import sys
-import pymongo
-import ssl
 from datetime import date, datetime
 
 sys.path.append(os.getcwd())

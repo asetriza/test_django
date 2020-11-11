@@ -3,6 +3,7 @@ import sys
 
 sys.path.append(os.getcwd())
 from src.aggregation.processing import processing_flghts
+from src.cron.wakemydyno import wake_dyno
 
 from apscheduler.schedulers.blocking import BlockingScheduler
 
@@ -17,6 +18,7 @@ def scheduled_job():
 
 @sched.scheduled_job("interval", minutes=1)
 def timed_job():
+    print(wake_dyno())
     print("This job is run every 1 minute.")
 
 
