@@ -16,10 +16,10 @@ def scheduled_job():
     print("This job processes flghts and sends to db every day at 00:00:00 UTC 0")
 
 
-@sched.scheduled_job("interval", minutes=25)
+@sched.scheduled_job("interval", minutes=10)
 def timed_job():
     print(wake_dyno())
-    print("This job is run every 25 minutes.")
+    print("This job is run every 10 minutes.")
 
 
 sched.start()
